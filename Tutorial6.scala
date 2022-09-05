@@ -10,7 +10,9 @@ object Tutorial6 extends App{
 	//The code we want to encrypt/decrypt
 	val inputText = scala.io.StdIn.readLine("Secret Message: ")
 
-	//Lets Encrypt/Decrypt the code
+	//Encrypt/Decrypt the code
+	//shift(+) -> encrypt
+	//shift(-) -> decrypt
 	val outputText = inputText.map( (c: Char) => { 
 
 		//Finding the c char in our alphabet
