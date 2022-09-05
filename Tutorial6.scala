@@ -4,11 +4,11 @@ object Tutorial6 extends App{
 	val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 	//Text will be shift by this much
-	//shift = (# + 26) % 26 <-- This allows us to take any number (even if it is negative, or bigger than our alphabet size) 
-	val shift = (scala.io.StdIn.readLine("Shift By: ").toInt + alphabet.size) % alphabet.size
+	//shift = (# + 26) % 26 <-- This allows us to take any number (negative, or bigger than our alphabet size) 
+	val shift = (scala.io.StdIn.readLine("Shift No: ").toInt + alphabet.size) % alphabet.size
 
 	//The code we want to encrypt/decrypt
-	val inputText = scala.io.StdIn.readLine("Secret Message: ")
+	val inputText = scala.io.StdIn.readLine("Message: ")
 
 	//Encrypt/Decrypt the code
 	//shift(+) -> encrypt
@@ -18,7 +18,7 @@ object Tutorial6 extends App{
 		//Finding the c char in our alphabet
 		val x = alphabet.indexOf(c.toUpper)
 
-		//c char is not in our alphabet -> leave it be
+		//c char is not in our alphabet -> nothing changes
 		if (x == -1){
 			c
 		}
