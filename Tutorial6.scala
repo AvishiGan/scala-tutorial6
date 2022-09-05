@@ -8,12 +8,12 @@ object Tutorial6 extends App{
 	val shift = (scala.io.StdIn.readLine("Shift No: ").toInt + alphabet.size) % alphabet.size
 
 	//The code we want to encrypt/decrypt
-	val inputText = scala.io.StdIn.readLine("Message: ")
+	val input = scala.io.StdIn.readLine("Message: ")
 
 	//Encrypt/Decrypt the code
 	//shift(+) -> encrypt
 	//shift(-) -> decrypt
-	val outputText = inputText.map( (c: Char) => { 
+	val output = input.map( (c: Char) => { 
 
 		//Finding the c char in our alphabet
 		val x = alphabet.indexOf(c.toUpper)
@@ -30,5 +30,5 @@ object Tutorial6 extends App{
 	});
 
 	//Print the result
-	println(outputText);
+	println(output);
 }    
